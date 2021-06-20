@@ -1,0 +1,12 @@
+.idea
+*.sqlite3
+venv
+*.pyc
+uwsgi.ini
+uwsgi_params
+*.bak
+*.dat
+*.pid
+*.dir
+.env
+companyhero/local_settings.py
