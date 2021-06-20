@@ -9,4 +9,4 @@ uwsgi_params
 *.pid
 *.dir
 .env
-companyhero/local_settings.py
+amcom/local_settings.py
