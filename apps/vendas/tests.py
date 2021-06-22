@@ -15,7 +15,7 @@ class ProdutoTestCase(APITestCase):
         self.client.force_authenticate(user=self.user)
 
     def test_inclusao_produto(self):
-        url = reverse('produto-list')
+        url = reverse('produtos-list')
         data = {'nome': 'Smartphone',
                 'preco': 350.20,
                 'comissao': 5.30}
@@ -34,7 +34,7 @@ class VendedorTestCase(APITestCase):
         self.client.force_authenticate(user=self.user)
 
     def test_inclusao_vendedor(self):
-        url = reverse('vendedor-list')
+        url = reverse('vendedores-list')
         data = {'nome': 'jonas'}
         response = self.client.post(url, data, format='json')
 
@@ -51,8 +51,9 @@ class ClienteTestCase(APITestCase):
         self.client.force_authenticate(user=self.user)
 
     def test_inclusao_cliente(self):
-        url = reverse('cliente-list')
+        url = reverse('clientes-list')
         data = {'nome': 'felipe'}
+        breakpoint()
         response = self.client.post(url, data, format='json')
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
